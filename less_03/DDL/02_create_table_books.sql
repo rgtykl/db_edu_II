@@ -22,6 +22,7 @@ COMMENT ON COLUMN student12.tb_books.price IS 'Цена';
 ALTER TABLE student12.tb_books ADD CONSTRAINT fk_tb_books_writer_id FOREIGN KEY (writer_id) REFERENCES student12.tb_writers(id);
 
 
+
 CREATE TABLE IF NOT EXISTS student12.tb_books_0_1000 PARTITION OF student12.tb_books
     FOR VALUES FROM (0) TO (1000);
 CREATE TABLE IF NOT EXISTS student12.tb_books_1000_10000 PARTITION OF student12.tb_books
